@@ -9,13 +9,15 @@ void main() {
           title: const Text('Dicee'),
           backgroundColor: Colors.teal,
         ),
-        body: DicePage(),
+        body: const DicePage(),
       ),
     ),
   );
 }
 
 class DicePage extends StatelessWidget {
+  const DicePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Row(
