@@ -6,17 +6,20 @@ void main() {
       home: Scaffold(
         backgroundColor: Colors.red,
         appBar: AppBar(
-          title: const Text('Dicee'),
+          title:  Text('Dicee'),
           backgroundColor: Colors.teal,
         ),
-        body: const DicePage(),
+        body: DicePage(),
       ),
     ),
   );
 }
 
 class DicePage extends StatelessWidget {
-  const DicePage({super.key});
+  //const DicePage({super.key});
+
+    var leftDiceNum = 2;
+    var rightDiceNum = 4; 
 
   @override
   Widget build(BuildContext context) {
@@ -24,10 +27,20 @@ class DicePage extends StatelessWidget {
       child: Row(
         children: <Widget>[
           Expanded(
-            child: Image.asset('images/dice1.png'),
+            child: TextButton(
+              onPressed: (){
+                print('Ashutosh');
+              },
+              child: Image.asset('images/dice$leftDiceNum.png'),
+            ),
           ),
           Expanded(
-            child: Image.asset('images/dice6.png'),          
+            child: TextButton(
+              onPressed: (){
+                print('Rai');
+              },
+              child: Image.asset('images/dice$rightDiceNum.png'),
+            ),
           )
         ],
       ),
