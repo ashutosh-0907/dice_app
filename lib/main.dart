@@ -6,10 +6,10 @@ void main() {
       home: Scaffold(
         backgroundColor: Colors.red,
         appBar: AppBar(
-          title:  Text('Dicee'),
+          title:  const Text('Dicee'),
           backgroundColor: Colors.teal,
         ),
-        body: DicePage(),
+        body: const DicePage(),
       ),
     ),
   );
@@ -21,7 +21,7 @@ class DicePage extends StatefulWidget {
   State<DicePage> createState() => _DicePageState();
 }
 
-class _MyWidgetState extends State<DicePage> {
+class _DicePageState extends State<DicePage> {
 
     var leftDiceNum = 2;
     var rightDiceNum = 4; 
